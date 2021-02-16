@@ -1,0 +1,38 @@
+{
+  "name": "nextjs-tailwind-storybook-starter",
+  "version": "1.0.0",
+  "description": "Nextjs, tailwindcss, storybook with twin.macro starter template",
+  "main": "index.js",
+  "dependencies": {
+    "next": "^10.0.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dtro-devuk/nextjs-tailwind-storybook-starter.git"
+  },
+  "keywords": [
+    "Nextjs",
+    "Tailwindcss",
+    "Storybook",
+    "Twin.Macro",
+    "Styled-components",
+    "Atomic-Design",
+    "UI-Design",
+    "Components"
+  ],
+  "author": "dtro-devuk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dtro-devuk/nextjs-tailwind-storybook-starter/issues"
+  },
+  "homepage": "https://github.com/dtro-devuk/nextjs-tailwind-storybook-starter#readme"
+}
