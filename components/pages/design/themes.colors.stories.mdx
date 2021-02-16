@@ -1,0 +1,94 @@
+import {
+  Meta,
+  ColorPalette,
+  ColorItem,
+  Typeset,
+} from "@storybook/addon-docs/blocks";
+
+import { Theme } from "../../../styles";
+
+import { theme } from "../../../utils/tailwindConfig";
+
+<Meta title="Atomic Design/Themes/02-Colours" />
+
+# Colours
+
+## Colour Pallette Tools
+
+- [Tailwind Shades](https://www.tailwindshades.com/)
+- [Colour Scheme Generator](https://www.tailwindshades.com/)
+- [Tailwind Shades Generator](https://marketplace.visualstudio.com/items?itemName=bourhaouta.tailwindshades)
+
+## Light Theme
+
+<ColorPalette>
+  <ColorItem
+    title="theme.color.background"
+    subtitle="White"
+    colors={[theme.colors.white]}
+  />
+  <ColorItem
+    title="theme.color.text"
+    subtitle="Black"
+    colors={[theme.colors.black]}
+  />
+  <ColorItem
+    title="theme.color.header"
+    subtitle="Grey"
+    colors={[theme.colors.gray[700]]}
+  />
+</ColorPalette>
+
+## Dark Theme
+
+<ColorPalette>
+  <ColorItem
+    title="theme.color.background"
+    subtitle="White"
+    colors={[theme.colors.gray[900]]}
+  />
+  <ColorItem
+    title="theme.color.text"
+    subtitle="White"
+    colors={[theme.colors.white]}
+  />
+  <ColorItem
+    title="theme.color.header"
+    subtitle="Grey"
+    colors={[theme.colors.gray[200]]}
+  />
+</ColorPalette>
+
+## Shared
+
+<ColorPalette>
+  <ColorItem
+    title="theme.backgroundColor.primary"
+    subtitle="Pink"
+    colors={[theme.backgroundColor.primary]}
+  />
+  <ColorItem
+    title="theme.backgroundColor.secondary"
+    subtitle="Purple"
+    colors={[theme.backgroundColor.secondary[500]]}
+  />
+  <ColorItem
+    title="theme.color.tertiary"
+    subtitle="Gray"
+    colors={[theme.colors.tertiary[500]]}
+  />
+  <ColorItem
+    title="Monochrome"
+    colors={[
+      theme.colors.monochrome[900],
+      theme.colors.monochrome[800],
+      theme.colors.monochrome[700],
+      theme.colors.monochrome[600],
+      theme.colors.monochrome[500],
+      theme.colors.monochrome[400],
+      theme.colors.monochrome[300],
+      theme.colors.monochrome[200],
+      theme.colors.monochrome[100],
+    ]}
+  />
+</ColorPalette>

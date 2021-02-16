@@ -1,0 +1,148 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
+
+import { Theme } from "../../../styles";
+import Logo from "./Logo";
+
+<Meta title="Components/Atoms/Logo" component={Logo} />
+
+# Logo
+
+## Preview
+
+<Canvas>
+  <Story
+    name="Basic"
+    args={{
+      accent: "blue-500",
+      color: "blue-500",
+      hoverColor: "yellow-500",
+      text: "dtro-devuk",
+      fontFamily: "Grandstander-VariableFont",
+    }}
+  >
+    {(args) => <Logo {...args} />}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Logo} />
+
+## Accent
+
+You can adjust the accent (tags) color by passing the `accent` prop.
+
+<Canvas>
+  <Story name="Accent Colour">
+    <div>
+      <Logo
+        accent="gray-500"
+        color="blue-500"
+        text="dtro-devuk"
+        hoverColor="blue-500"
+      />
+      <Logo
+        accent="gray-500"
+        color="black"
+        text="dtro-devuk"
+        hoverColor="blue-500"
+      />
+    </div>
+  </Story>
+</Canvas>
+
+## Colour
+
+You can change the default colour of the logo by passing the `color` prop.
+
+<Canvas>
+  <Story name="Main Text Colour">
+    <div>
+      <Logo
+        accent="gray-500"
+        color="gray-500"
+        text="dtro-devuk"
+        hoverColor="blue-500"
+      />
+      <Logo
+        accent="gray-500"
+        color="blue-500"
+        text="dtro-devuk"
+        hoverColor="blue-500"
+      />
+    </div>
+  </Story>
+</Canvas>
+
+## Hover Color
+
+You can change the hover colour of the logo by passing the `hoverColor` prop.
+
+<Canvas>
+  <Story name="Hover Colour">
+    <div>
+      <Logo
+        accent="gray-500"
+        color="gray-500"
+        text="dtro-devuk"
+        hoverColor="blue-500"
+      />
+      <Logo
+        accent="gray-500"
+        color="gray-500"
+        text="dtro-devuk"
+        hoverColor="gray-500"
+      />
+    </div>
+  </Story>
+</Canvas>
+
+## Text
+
+You must set the main text for the logo, such as a name using the `text` prop.
+
+<Canvas>
+  <Story name="Main Text">
+    <div>
+      <Logo text="dtro-devuk" />
+      <Logo text="John Smith" />
+      <Logo text="xyz.io" />
+      <Logo text="Random" />
+    </div>
+  </Story>
+</Canvas>
+
+## Size
+
+You can also adjust the size of the logo by passing the `size` prop.
+
+<Canvas>
+  <Story name="Text Size">
+    <div>
+      <Logo accent="gray-700" size="xs" text="dtro-devuk" />
+      <Logo accent="gray-700" size="sm" text="dtro-devuk" />
+      <Logo accent="gray-700" size="lg" text="dtro-devuk" />
+      <Logo accent="gray-700" size="xl" text="dtro-devuk" />
+      <Logo accent="gray-700" size="2xl" text="dtro-devuk" />
+      <Logo accent="gray-700" size="3xl" text="dtro-devuk" />
+      <Logo accent="gray-700" size="4xl" text="dtro-devuk" />
+    </div>
+  </Story>
+</Canvas>
+
+## Dark Mode
+
+Example dark mode component.
+
+<Canvas>
+  <Story name="Dark Mode">
+    <div class={`bg-$Theme.dark.background} p-5`}>
+      <Logo
+        accent="gray-500"
+        color={Theme.dark.text}
+        hoverColor={Theme.colors.primary}
+        text="dtro-devuk"
+      />
+    </div>
+  </Story>
+</Canvas>

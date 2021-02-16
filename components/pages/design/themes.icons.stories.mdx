@@ -1,0 +1,27 @@
+import { Meta, IconGallery, IconItem, Typeset } from '@storybook/addon-docs/blocks';
+
+import { Theme } from '../../../styles';
+import { theme } from '../../../utils/tailwindConfig';
+
+import { faGitSquare, faGithub, faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+<Meta title="Atomic Design/Themes/03-Icons" />
+
+# Icons
+
+## Icon Gallery
+
+### Fontawesome Icons
+
+<IconGallery>
+  <IconItem name="GitHub">
+    <FontAwesomeIcon icon={faGithub} size="2x" color={[theme.colors.primary]} />
+  </IconItem>
+  <IconItem name="GitHub Square">
+    <FontAwesomeIcon icon={faGitSquare} size="2x" color={[theme.colors.primary]} />
+  </IconItem>
+  <IconItem name="GitHub Alt">
+    <FontAwesomeIcon icon={faGithubAlt} size="2x" color={[theme.colors.primary]} />
+  </IconItem>
+</IconGallery>

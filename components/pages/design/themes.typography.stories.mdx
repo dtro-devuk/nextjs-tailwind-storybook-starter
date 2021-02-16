@@ -1,0 +1,81 @@
+import {
+  Meta,
+  ColorPalette,
+  ColorItem,
+  Typeset,
+} from "@storybook/addon-docs/blocks";
+
+import { Theme } from "../../../styles";
+
+import { theme } from "../../../utils/tailwindConfig";
+
+<Meta title="Atomic Design/Themes/04-Typography" />
+
+# Typography
+
+We should use typography to present our content and design as clearly and as efficiently as
+possible.
+
+## Fonts and size playground
+
+[see for Fonts](https://tailwind-typography-playground.vercel.app/)
+
+## Type scale and Hierarchy
+
+Hierarchy is determined through typeface (serif, sans, decorative), font, font weight, size, letter
+spacing, and case.
+
+Typrographic elements
+
+- headlines (h1 - h6), can use expressive fonts, to help attract the eye
+- subtitles smaller, used for medium emphasis, and shorter lengths (sans or serif)
+- body (range 1 - 2) long form writing (content), so smaller text sizes (sans or serif)
+- captions smaller fonts, anotation, headline introduction (e.g. cards)
+- overline work with cations smaller, minim menu (e.g. cards)
+- buttons (CTA), smaller text (text, contained, outline), casing can be used, upper, sentence, no
+  expressive fonts (tabs, dialogs cards)
+- bold text
+- unordered lists
+- ordered lists
+- code blocks
+- block quotes
+- italics
+
+## Tailwind CSS Typography
+
+We use the Tailiwnd Typography `@tailwindcss/typography` plugin to style our documents and articles.
+By default Tailwind removes all the default browser styling from paragraphs, headings and more. Its
+done through the `prose` class, in order to add custom styling that is configured as a theme.
+
+## Header Text
+
+**Font**: Oswald **Weight**: 900
+
+<Typeset
+  fontFamily="Oswald Variable"
+  sampleText="Header"
+  fontSizes={[90, 80, 70, 60, 50, 40, 30, 20, 10]}
+  fontWeight={900}
+/>
+
+## Body Text
+
+**Font**: Merriweather Sans **Weight**: 500
+
+<Typeset
+  fontFamily="Georgia"
+  sampleText="Sample Text and Numbers, 200, 300, 400, 500, 600, 700!"
+  fontSizes={[90, 80, 70, 60, 50, 40, 30, 20, 10]}
+  fontWeight={500}
+/>
+
+## Decorative Text
+
+**Font**: Grandstander **Weight**: 900
+
+<Typeset
+  fontFamily="Grandstander Variable"
+  sampleText="dtro-devuk"
+  fontSizes={[90, 80, 70, 60, 50, 40, 30, 20, 10]}
+  fontWeight={900}
+/>

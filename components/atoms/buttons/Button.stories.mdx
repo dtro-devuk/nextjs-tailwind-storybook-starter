@@ -1,0 +1,113 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
+import { action, actions } from "@storybook/addon-actions";
+import Button from "./Button.js";
+const alertText = (e) => {
+  e.preventDefault();
+  alert(`You clicked the button`);
+};
+
+<Meta
+  title="Components/Atoms/Button" //Name of the stroy that will show up in Navigation
+  component={Button} //Used to extract the components description and props
+/>
+
+# Buttons
+
+There are different styles of button that we use for UI. They differ in Background Colour, Text Color,
+Text Case, Border Styles, Hover and Active etc.
+
+## Preview
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      label: "Default",
+      disabled: false,
+      variant: "default",
+      type: "button",
+      isSmall: false,
+      onClick: action(alertText),
+    }}
+  >
+    {(args) => <Button {...args} />}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={Button} />
+
+# Examples
+
+## Primary
+
+<Canvas>
+  <Story name="Primary">
+    <Button label="Primary" variant="primary" value="primary" />
+  </Story>
+</Canvas>
+
+## Secondary
+
+<Canvas>
+  <Story name="Secondary">
+    <Button label="Secondary" variant="secondary" value="secondary" />
+  </Story>
+</Canvas>
+
+## Tertiary
+
+<Canvas>
+  <Story name="Tertiary">
+    <Button label="Tertiary" variant="tertiary" value="tertiary" />
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story name="Disabled">
+    <Button label="Disabled" disabled={true} />
+  </Story>
+</Canvas>
+
+## Small
+
+<Canvas>
+  <Story name="Small">
+    <Button label="Small" isSmall={true} />
+  </Story>
+</Canvas>
+
+## Actions and Links
+
+<Canvas>
+  <Story name="ActionsAndLinks">
+    <div>
+      <Button
+        label="Submit"
+        type="submit"
+        onClick={alertText}
+        variant="primary"
+      />
+      <Button
+        label="Link"
+        variant="primary"
+        href="https://www.github.com/dtro-devuk"
+        target="_blank"
+      />
+    </div>
+  </Story>
+</Canvas>
+
+# Usage
+
+<Canvas>
+  <Story name="PrimaryAndSecondary">
+    <div>
+      <Button label="Secondary" variant="secondary" value="secondary" />
+      <Button label="Primary" variant="primary" value="primary" />
+    </div>
+  </Story>
+</Canvas>

@@ -1,0 +1,97 @@
+import {
+  Meta,
+  Story,
+  Canvas,
+  ArgsTable,
+  ColorPalette,
+  ColorItem,
+  Typeset,
+} from "@storybook/addon-docs/blocks";
+
+import { theme } from "../../../utils/tailwindConfig";
+
+import { config, library } from "@fortawesome/fontawesome-svg-core";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import {
+  faGitSquare,
+  faGithub as GitHub,
+  faGithubAlt,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+<Meta title="Overview/Welcome" />
+
+# Example Storybook Design Project
+
+Hi all, welcome 😀
+
+## Summary
+
+This project was built with
+
+- Storybook 6.0+,
+- NextJS 10+,
+- Tailwind CSS 2.0+,
+- Styled Components
+- Twin.Macro
+
+## Design Principles
+
+Design principles shape how we design components, and the related features we use in our apps and
+websites.
+
+The principles and guidelines are documented in Storybook. In effect this is a UI component library,
+which follows some of the most common design principles and features. It helps keep design and
+development in sync.
+
+We can design components in Storybook and translate this back to code. It also helps keep the design
+lifecycle going, and acts as a single source of reference.
+
+## Design Tokens
+
+Whilst the components provide the building blocks of our apps, design tokens define a set of
+priorities we can use to shape our components appearance.
+
+Common Tokens:
+
+- Typography
+- Colours
+  - Background
+  - Text
+  - Border -Spacings
+- Iconography
+
+Tokens make it easy to ensure that your design is consistent, and even easier to update it as your
+design evolves.
+
+They can be used to maintain consistent and scalable visual UI development, to replace hard code
+values (hex code, spacing etc.).
+
+`Design tokens are the visual design atoms of the design system - specifically they are the named entities that store visual design attributes`
+
+[Source: Sales force ]
+
+- [Storybook Design Token Addon](https://github.com/UX-and-I/storybook-design-token)
+- [Devto](https://dev.to/psqrrl/managing-design-tokens-using-storybook-5975)
+- [Example](https://storybook-design-token.netlify.app/?path=/story/components--button)
+- [Salesforce Design Tokens](https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/tokens_intro.htm)
+- [Salesforce Storybook](https://www.lightningdesignsystem.com/design-tokens/#category-font)
+
+## Atomic Design Principles
+
+Atomic Design is now over 6 years old and was introduced by Brad Frost.
+
+We will follow the Atomic Design principle within this library.
+
+Hence, the struture is as follows
+
+```
+Components
+|__Atoms
+|__Molecules
+|__Organisms
+|__Particles
+|__Pages
+|__Templates
+
+```

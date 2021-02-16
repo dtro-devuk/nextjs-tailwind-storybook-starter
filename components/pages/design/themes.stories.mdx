@@ -1,0 +1,54 @@
+import {
+  Meta,
+  ColorPalette,
+  ColorItem,
+  Typeset,
+} from "@storybook/addon-docs/blocks";
+
+import { Theme } from "../../../styles";
+
+import { theme } from "../../../utils/tailwindConfig";
+
+<Meta title="Atomic Design/Themes/01-Themeable Design" />
+
+# Themeable Design Systems
+
+Themeability, is a design feature that allows you to chnage the look and feel of the UI, throughout the Design process.
+
+Themeability is often overlooked when creating a designing a design system.
+However, its important to give it more respect earlier in the design process, as its often more difficult to retro-fit theme's at a later date.
+For themeability to work successfully it needs forethought and architecture within the design library, as well as the coded library.
+
+It entails the following:
+
+- Dark mode
+- Product specific look and feel
+- Whitelabeling (i.e. the ability to be re-branded, multiple times if neccessary, e.g. LinkedIn and Facebook)
+- Marketing and Branding
+- Accessibility
+- Makes a design robust and resilient
+
+Themeing is about how we colourize things (background, border colour, text colour).
+Its not about size, layout, hierarchy or content.
+
+We use theme variables like design tokens to build the design.
+
+Themeing tends to define the following:
+
+- background colour
+- text colour
+- primary colour
+- secondary colour
+- heading colour
+- link colour
+- border colour
+
+# Using Tailwind Themes
+
+This project uses Tailwindcss so a lot of colour props are passed in as CSS classes that Tailwind
+applies styling to i.e. `text-blue-500` to use the primary blue.
+
+We use Tailwinds Theme Configuration for our project design themability.
+
+Tailwind CSS is a highly customizeable CSS framework, that gives us all the builiding blocks to build custom interfaces and components.
+However, its a low-level framework so it only provides the low level utilities to create themes.

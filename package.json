@@ -3,18 +3,6 @@
   "version": "1.0.0",
   "description": "Nextjs, tailwindcss, storybook with twin.macro starter template",
   "main": "index.js",
-  "dependencies": {
-    "next": "^10.0.7",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dtro-devuk/nextjs-tailwind-storybook-starter.git"
@@ -34,5 +22,61 @@
   "bugs": {
     "url": "https://github.com/dtro-devuk/nextjs-tailwind-storybook-starter/issues"
   },
-  "homepage": "https://github.com/dtro-devuk/nextjs-tailwind-storybook-starter#readme"
+  "homepage": "https://github.com/dtro-devuk/nextjs-tailwind-storybook-starter#readme",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "storybook": "start-storybook -s ./public -p 5005 --no-manager-cache",
+    "storybook:build": "build-storybook",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "upgrade": "npm-check --update",
+    "upgrade-interactive": "npm-check --update"
+  },
+  "engines": {
+    "node": ">= 14.15.5",
+    "npm": ">= 7.5.4"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "styled-components",
+      "config": "./tailwind.config.js"
+    }
+  },
+  "dependencies": {
+    "next": "^10.0.7",
+    "normalize.css": "^8.0.1",
+    "npm-check": "^5.9.2",
+    "nprogress": "^0.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1",
+    "react-docgen": "^5.3.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@fortawesome/fontawesome-svg-core": "^1.2.34",
+    "@fortawesome/free-brands-svg-icons": "^5.15.2",
+    "@fortawesome/free-regular-svg-icons": "^5.15.2",
+    "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@storybook/addon-a11y": "^6.1.18",
+    "@storybook/addon-actions": "^6.1.18",
+    "@storybook/addon-docs": "^6.1.18",
+    "@storybook/addon-essentials": "^6.1.18",
+    "@storybook/addon-links": "^6.1.18",
+    "@storybook/react": "^6.1.18",
+    "@tailwindcss/postcss7-compat": "^2.0.3",
+    "@tailwindcss/typography": "^0.4.0",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-macros": "^2.8.0",
+    "fontfaceobserver": "^2.1.0",
+    "postcss": "^7.0.35",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "styled-components": "^5.2.1",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
+    "twin.macro": "^2.2.3"
+  }
 }

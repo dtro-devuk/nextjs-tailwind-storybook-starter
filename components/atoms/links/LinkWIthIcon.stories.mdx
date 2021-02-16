@@ -1,0 +1,94 @@
+import { Meta, Story, Canvas, Preview, ArgsTable } from '@storybook/addon-docs/blocks';
+
+import LinkWithIcon from './LinkWithIcon';
+
+import { config, library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { faGitSquare, faGithub, faGithubAlt } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+const Icon = <FontAwesomeIcon icon={faGithub} size="1x" />;
+const IconSquare = <FontAwesomeIcon icon={faGitSquare} size="1x" />;
+const IconAlt = <FontAwesomeIcon icon={faGithubAlt} size="1x" />;
+
+<Meta title="Components/Atoms/IconLink" component={LinkWithIcon} />
+
+# Icon Links
+
+Use Icon links to connect pages with each other or to open external links in a new tab.
+
+## Preview
+
+<Canvas>
+  <Story
+    name="Basic"
+    args={{
+      icon: { ...Icon },
+      url: '/',
+      label: 'dtro-devuk',
+      className: 'font-Grandstander-VariableFont text-3xl',
+    }}
+  >
+    {(args) => <LinkWithIcon {...args} />}
+  </Story>
+</Canvas>
+
+## Props
+
+<ArgsTable of={LinkWithIcon} />
+
+# Examples
+
+## Icon
+
+You can change the links icon by passing the `icon` prop.
+
+<Canvas>
+  <Story name="Icon">
+    <LinkWithIcon icon={Icon} label="GitHub" />
+    <LinkWithIcon icon={IconSquare} label="GitHub" />
+    <LinkWithIcon icon={IconAlt} label="GitHub" />
+  </Story>
+</Canvas>
+
+## Label
+
+You can change the links main text label by passing the `label` prop.
+
+<Canvas>
+  <Story name="Label">
+    <LinkWithIcon icon={Icon} label="Home" />
+    <LinkWithIcon icon={Icon} label="GitHub Site" />
+  </Story>
+</Canvas>
+
+## URL
+
+You can change the links url {href} by passing the `url` prop.
+
+<Canvas>
+  <Story name="URL">
+    <LinkWithIcon icon={Icon} url={'/'} label="Home" />
+    <LinkWithIcon icon={Icon} url={'https://www.github.com/dtro-devuk'} label="GitHub Site" />
+  </Story>
+</Canvas>
+
+## Disabled?
+
+You can disable/enable the icon by passing the `disabled` prop.
+
+<Canvas>
+  <Story name="Disabled">
+    <LinkWithIcon disabled={false} icon={Icon} label="GitHub Enabled" />
+    <LinkWithIcon disabled={true} icon={Icon} label="GitHub Disabled" />
+  </Story>
+</Canvas>
+
+## All
+
+Here we pass all the props
+
+<Canvas>
+  <Story name="All">
+    <LinkWithIcon icon={Icon} label="GitHub" url="https://www.github.com/dtro-devuk" />
+  </Story>
+</Canvas>
