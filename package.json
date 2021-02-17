@@ -37,6 +37,19 @@
     "node": ">= 14.15.5",
     "npm": ">= 7.5.4"
   },
+  "prettier": {
+    "arrowParens": "always",
+    "singleQuote": true,
+    "tabWidth": 2,
+    "printWidth": 100,
+    "trailingComma": "es5",
+    "useTabs": false,
+    "semi": true,
+    "bracketSpacing": true,
+    "jsxBracketSameLine": false,
+    "proseWrap": "always",
+    "endOfLine": "lf"
+  },
   "babelMacros": {
     "twin": {
       "preset": "styled-components",
@@ -75,6 +88,7 @@
     "postcss": "^7.0.35",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.0.5",
     "styled-components": "^5.2.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
     "twin.macro": "^2.2.3"

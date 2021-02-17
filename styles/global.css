@@ -1,11 +1,39 @@
+/* //TODO: Implement Dark https://jeffjadulco.com/blog/dark-mode-react-tailwind/ */
+
 @import '../node_modules/normalize.css/normalize.css';
 /* @import "normalize.css/normalize.css" */
 
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import 'tailwindcss/base'; */
+@layer base {
+  h1 {
+    @apply text-5xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+    @apply text-3xl;
+  } 
+  h4 {
+    @apply text-2xl;
+  } 
+  h5 {
+    @apply text-xl underline;
+  } 
+  h6 {
+    @apply text-xl ;
+  }   
+}
+/* @import 'tailwindcss/components';
+@import 'tailwindcss/utilities'; */
 
 @import '../public/static/fonts/fonts.css';
+
+
 
 
 html {
